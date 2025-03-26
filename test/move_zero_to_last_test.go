@@ -1,8 +1,10 @@
-package core
+package test
 
 import (
 	"reflect"
 	"testing"
+
+	"github.com/phankieuphu/dsa.git/core"
 )
 
 func TestMoveZeroToLast(t *testing.T) {
@@ -21,7 +23,7 @@ func TestMoveZeroToLast(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got := MoveZeroToLast(append([]int{}, tt.input...)) // Avoid modifying original input
+			got := core.MoveZeroToLast(append([]int{}, tt.input...)) // Avoid modifying original input
 			if !reflect.DeepEqual(got, tt.expected) {
 				t.Errorf("MoveZeroToLast(%v) = %v; want %v", tt.input, got, tt.expected)
 			}
