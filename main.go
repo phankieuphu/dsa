@@ -8,6 +8,6 @@ import (
 
 func main() {
 	input := []int{2, 3, 4, 1, 8, 5, 8, 9}
-	result := sort.MergeSort(input)
+	result := sort.InsertionSort(input)
 	fmt.Println("Sorted array:", result)
 }
